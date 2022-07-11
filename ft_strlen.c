@@ -17,5 +17,6 @@ int main()
     char string[] = "Hellooooooooooo";
    int c =  ft_strlen(string);
    printf("%d",c);
+
 }
 */

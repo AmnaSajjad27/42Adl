@@ -22,6 +22,5 @@ int main() {
 
    ft_memset(str,'a',1);
    puts(str);
-   
 }
 */

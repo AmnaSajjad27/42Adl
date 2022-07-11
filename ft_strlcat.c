@@ -21,3 +21,4 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
     dst[c] = '\0';
     return (ft_strlen(dst) + ft_strlen(&src[d]));
 }
+/*writeamain*/

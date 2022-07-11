@@ -34,5 +34,6 @@ int main()
     printf("%s\n", dest);
  
     return 0;
+    works
 }
 */

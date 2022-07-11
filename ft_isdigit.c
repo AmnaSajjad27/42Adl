@@ -14,7 +14,7 @@ int ft_isdigit(int c)
 /*
 int main()
 {
-    int c = 'W';
+    int c = 'n';
     int d = ft_isdigit(c);
     printf("%d",d);
 }

@@ -8,3 +8,4 @@ char    *ft_strchr(const char *s,int c)
         return ((char *)s);
     return(0);
 }
+/*works??>*/

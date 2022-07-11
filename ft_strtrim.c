@@ -29,3 +29,4 @@ int main()
     ft_strtrim("amna","a");
 }
 */
+/*dontwork??*/

@@ -18,4 +18,5 @@ int main()
     int a = ft_toupper(c);
     printf("%c",a);
 }
+/*works*/
 */
