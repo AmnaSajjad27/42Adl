@@ -1,17 +1,26 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/12 10:10:15 by asajjad           #+#    #+#             */
+/*   Updated: 2022/07/12 10:12:36 by asajjad          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while (i < len)
-    {
-        ((unsigned char *)b)[i] = c;
-        i++;
-    }
-    return (b);
+	i = 0;
+	while (i < len)
+	{
+		((unsigned char *)b)[i] = c;
+		i++;
+	}
+	return (b);
 }
 /*
 int main() {
