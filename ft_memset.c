@@ -5,10 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 10:10:15 by asajjad           #+#    #+#             */
-/*   Updated: 2022/07/12 10:12:36 by asajjad          ###   ########.fr       */
+/*   Created: 2022/08/05 15:17:28 by asajjad           #+#    #+#             */
+/*   Updated: 2022/08/05 15:21:15 by asajjad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
+#include <string.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {

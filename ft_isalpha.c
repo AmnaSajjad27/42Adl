@@ -6,7 +6,7 @@
 /*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 08:42:15 by asajjad           #+#    #+#             */
-/*   Updated: 2022/07/12 08:58:51 by asajjad          ###   ########.fr       */
+/*   Updated: 2022/08/05 14:48:17 by asajjad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ int main()
     printf("\nResult when lowercase alphabet is passed: %d", ft_isalpha(c));
 
     c='+';
-    printf("\nResult when non-alphabetic character is passed: %d", ft_isalpha(c));
+    printf("\nResult when non-alphabetic character is passed: %d", ft_isal
+	pha(c));
 
     return 0;
 }

@@ -1,18 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/05 19:24:51 by asajjad           #+#    #+#             */
+/*   Updated: 2022/08/05 19:28:52 by asajjad          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <stdlib.h>
-#include "ft_strlen.c"
-#include "ft_memcpy.c"
 
-char    *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
-    char *s2;
+	char	*s2;
 
-    if (!(s2 = (char *)malloc(ft_strlen(s1) + 1)))
-    {
-        return (0);
-    }
-    ft_memcpy(s2, s1, ft_strlen(s1) + 1);
-    return (s2);
+	s2 = (char *)malloc(ft_strlen(s1) + 1);
+	if (!s2)
+	{
+		return (0);
+	}
+	ft_memcpy(s2, s1, ft_strlen(s1) + 1);
+	return (s2);
 }
 /*
 int main() {
@@ -22,5 +33,4 @@ int main() {
    printf("The string : %s", result);
    return 0;
 }
-works
 */
