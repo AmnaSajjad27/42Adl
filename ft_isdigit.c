@@ -12,20 +12,25 @@
 
 int	ft_isdigit(int c)
 {
-	if (c > 47 && c < 58)
+	if (c >= '0' && c <= '9')
 	{
 		return (1);
 	}
 	else
 	{
-		return (1);
+		return (0);
 	}
 }
 /*
 int main()
 {
-    int c = 'n';
-    int d = ft_isdigit(c);
-    printf("%d",d);
+    char c;
+    c='5';
+    printf("Result when numeric character is passed: %d", ft_isdigit(c));
+
+    c='+';
+    printf("\nResult when non-numeric character is passed: %d", ft_isdigit(c));
+
+    return 0;
 }
 */

@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 int	ft_isalpha(int c)
 {
 	if (c > 64 && c < 91)
@@ -28,8 +26,16 @@ int	ft_isalpha(int c)
 /*
 int main()
 {
-    int c = '8';
-    int d = ft_isalpha(c);
-    printf("%d",d);
+    char c;
+    c = 'Q';
+    printf("\nResult when uppercase alphabet is passed: %d", ft_isalpha(c));
+
+    c = 'q';
+    printf("\nResult when lowercase alphabet is passed: %d", ft_isalpha(c));
+
+    c='+';
+    printf("\nResult when non-alphabetic character is passed: %d", ft_isalpha(c));
+
+    return 0;
 }
 */
