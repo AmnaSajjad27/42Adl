@@ -1,25 +1,34 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "ft_strdup.c"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/12 17:46:57 by asajjad           #+#    #+#             */
+/*   Updated: 2022/08/12 17:51:54 by asajjad          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "libft.h"
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    char    *str;
-    unsigned int i;
+	char			*str;
+	unsigned int	i;
 
-    if (!s && !f && !(str = ft_strdup(s)))
-    {
-        return (0);
-    }
-    i = 0;
-    while (str[i])
-    {
-        str[i] = f(i,str[i]);
-        i++;
-    }
-    return (str);
+	str = ft_strdup(s);
+	if (!s && !f && !(str))
+	{
+		return (0);
+	}
+	i = 0;
+	while (str[i])
+	{
+		str[i] = f(i, str[i]);
+		i++;
+	}
+	return (str);
 }
-
-
 /*
 
 int add(int a, int b)

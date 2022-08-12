@@ -1,34 +1,59 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/12 17:28:39 by asajjad           #+#    #+#             */
+/*   Updated: 2022/08/12 17:46:11 by asajjad          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "libft.h"
 
+static int	itoa_length(int n)
+{
+	int	len;
+
+	len = 0;
+	if (n < 0)
+		len++;
+	if (n == 0)
+		len = 1;
+	while (n)
+	{
+		len++;
+		n = n / 10;
+	}
+	return (len);
+}
 
 char	*ft_itoa(int n)
 {
 	char	*str;
-	long	nbr;
-	size_t	size;
+	int		len;
 
-	nbr = n;
-	size = n > 0 ? 0 : 1;
-	nbr = nbr > 0 ? nbr : -nbr;
-	while (n)
+	len = itoa_length(n);
+	str = ft_strnew(len);
+	if (str == NULL)
+		return (NULL);
+	if (n == 0)
+	str[0] = '0';
+	if (n < 0)
 	{
-		n /= 10;
-		size++;
+		str[0] = '-';
+		if (n == -2147483648)
+		{
+				str[len-- - 1] = '8';
+				n = n / 10;
+		}
+		n = -n;
 	}
-	if (!(str = (char *)malloc(size + 1)))
-		return (0);
-	*(str + size--) = '\0';
-	while (nbr > 0)
+	while (n != 0 && len >= 0)
 	{
-		*(str + size--) = nbr % 10 + '0';
-		nbr /= 10;
+		str[len-- - 1] = n % 10 + 48;
+		n = n / 10;
 	}
-	if (size == 0 && str[1] == '\0')
-		*(str + size) = '0';
-	else if (size == 0 && str[1] != '\0')
-		*(str + size) = '-';
 	return (str);
 }
 /*
