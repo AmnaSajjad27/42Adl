@@ -6,9 +6,11 @@
 /*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 16:02:51 by asajjad           #+#    #+#             */
-/*   Updated: 2022/08/12 16:14:11 by asajjad          ###   ########.fr       */
+/*   Updated: 2022/08/15 18:50:26 by asajjad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h" 
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

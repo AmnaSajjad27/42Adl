@@ -1,15 +1,26 @@
-t_list *ft_lstlast(t_list *lst)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/15 17:05:39 by asajjad           #+#    #+#             */
+/*   Updated: 2022/08/15 17:06:45 by asajjad          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+t_list	*ft_lstlast(t_list *lst)
 {
-    // if not allocated properly, return out of the function
-    if (!lst)
-    {
-        return ;
-    }
-    // using a while loop to keep moving to the next node and hold it in variable lst
-    while (lst->next)
-    {
-        lst = lst->next;
-    }
-    // return the last node held in variable lst
-    return (lst);
+	if (!lst)
+	{
+		return ;
+	}
+	while (lst->next)
+	{
+		lst = lst->next;
+	}
+	return (lst);
 }

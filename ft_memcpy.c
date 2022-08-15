@@ -6,11 +6,11 @@
 /*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 15:27:38 by asajjad           #+#    #+#             */
-/*   Updated: 2022/08/05 15:37:59 by asajjad          ###   ########.fr       */
+/*   Updated: 2022/08/15 18:41:35 by asajjad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
+
+#include "libft.h" 
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

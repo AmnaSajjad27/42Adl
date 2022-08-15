@@ -6,9 +6,11 @@
 /*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 15:57:13 by asajjad           #+#    #+#             */
-/*   Updated: 2022/08/12 16:02:32 by asajjad          ###   ########.fr       */
+/*   Updated: 2022/08/15 18:49:57 by asajjad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h" 
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

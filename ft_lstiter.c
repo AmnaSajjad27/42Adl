@@ -1,15 +1,26 @@
-void ft_lstiter(t_list *lst, void (*f)(void *))
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/15 17:29:49 by asajjad           #+#    #+#             */
+/*   Updated: 2022/08/15 17:31:12 by asajjad          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    // if not allocated properly, exit out of the function
-    if (!lst || !f)
-    {
-        return ;
-    }
-    // iterating through the entire loop using a while loop
-    while (lst)
-    {
-        // appling the function given as a parameter 
-        f(lst->content);
-        lst = lst->next;
-    }
+	if (!lst || !f)
+	{
+		return ;
+	}
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }

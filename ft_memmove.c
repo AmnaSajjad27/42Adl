@@ -6,10 +6,10 @@
 /*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 15:40:58 by asajjad           #+#    #+#             */
-/*   Updated: 2022/08/05 15:53:12 by asajjad          ###   ########.fr       */
+/*   Updated: 2022/08/15 18:42:08 by asajjad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

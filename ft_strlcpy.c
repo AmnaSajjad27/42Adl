@@ -6,11 +6,11 @@
 /*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 16:11:48 by asajjad           #+#    #+#             */
-/*   Updated: 2022/08/05 16:17:01 by asajjad          ###   ########.fr       */
+/*   Updated: 2022/08/15 18:42:54 by asajjad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h> 
+
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

@@ -1,21 +1,30 @@
-void ft_lstadd_back(t_list **lst, t_list *new)
-{
-    // intialise a variable to hold the last node
-    t_list *last;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/15 17:08:21 by asajjad           #+#    #+#             */
+/*   Updated: 2022/08/15 17:20:47 by asajjad          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    // if not allocated properly, exist out of the function
-    if (!new)
-    {
-        return ;
-    }
-    // if not allocated properly, allocate and exist out of the function
-    if (!*lst)
-    {
-        *lst = new;
-        return ;
-    }
-    // use the function to find the last node and hold it in variable last
-    *last = ft_lstlast(*lst);
-    // put the last node into the back of the list
-    last->next = new;
+#include "libft.h"
+
+void	ft_lstadd_back(t_list **lst, t_list *new)
+{
+	t_list	*last;
+
+	if (!new)
+	{
+		return ;
+	}
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
+	*last = ft_lstlast(*lst);
+	last->next = new;
 }

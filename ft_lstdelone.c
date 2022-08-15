@@ -1,12 +1,23 @@
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/15 17:22:59 by asajjad           #+#    #+#             */
+/*   Updated: 2022/08/15 17:24:25 by asajjad          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-    // if lst not allocated properly, exit out of the function
-    if (!lst)
-    {
-        return ;
-    }
-    // delete the node lst using the function given as a parameter
-    delete (lst->content);
-    // deallocate the memory held by lst
-    free(lst);
+	if (!lst)
+	{
+		return ;
+	}
+	delete (lst->content);
+	free(lst);
 }

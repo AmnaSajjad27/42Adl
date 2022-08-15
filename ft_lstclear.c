@@ -1,21 +1,30 @@
-void ft_lstclear(t_list **lst, void (*del)(void*))
-{
-    t_list *last;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/15 17:25:42 by asajjad           #+#    #+#             */
+/*   Updated: 2022/08/15 17:28:57 by asajjad          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    // if not allocated properly, exit out of the function
-    if(!*lst)
-    {
-        return ;
-    }
-    // 
-    while (*lst)
-    {
-        // find the last node
-        last = (*lst)->next
-        // delete and free the last node
-        ft_lstdelone(*lst, del);
-        *lst = last;
-    }
-    //pointer to lst is set to NULL
-    *lst = 0;
+#include "libft.h"
+
+void	ft_lstclear(t_list **lst, void (*del)(void*))
+{
+	t_list	*last;
+
+	if (!*lst)
+	{
+		return ;
+	}
+	while (*lst)
+	{
+		last = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = last;
+	}
+	*lst = 0;
 }

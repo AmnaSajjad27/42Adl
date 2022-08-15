@@ -1,23 +1,27 @@
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/15 16:53:12 by asajjad           #+#    #+#             */
+/*   Updated: 2022/08/15 16:57:55 by asajjad          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-t_list *ft_lstnew(void *content)
+#include "libft.h" 
+
+t_list	*ft_lstnew(void *content)
 {
-    // initalise a new node
-    t_list *new;
+	t_list	*new;
 
-    // allocate memory for the new node
-    new = (t_list *)malloc(sizeof(t_list));
-
-    // if node didnt allocate properly, return out of the function
-    if (!(new))
-    {
-        return ;
-    }
-    // the member variable content is initalised with value of parameter content 
-    new->content = content;
-    // the last one points to NULL
-    new->next = NULL;
-    // return the new node
-    return (new);
+	new = (t_list *)malloc(sizeof(t_list));
+	if (!(new))
+	{
+		return ;
+	}
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }
