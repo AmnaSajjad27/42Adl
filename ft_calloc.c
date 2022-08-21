@@ -22,7 +22,7 @@ void	*ft_calloc(size_t count, size_t size)
 	if (!dst)
 		return (NULL);
 	else
-		ft_memset(dst, 0, tot_size);
+		ft_bzero(dst, tot_size);
 	return (dst);
 }
 /*
