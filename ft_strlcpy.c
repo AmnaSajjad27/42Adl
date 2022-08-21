@@ -6,7 +6,7 @@
 /*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 16:11:48 by asajjad           #+#    #+#             */
-/*   Updated: 2022/08/15 18:42:54 by asajjad          ###   ########.fr       */
+/*   Updated: 2022/08/21 14:14:37 by asajjad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		}
 		dst[i] = '\0';
 	}
-	retun (srcsize);
+	return (srcsize);
 }
 /*
 int main()

@@ -6,7 +6,7 @@
 /*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 18:04:50 by asajjad           #+#    #+#             */
-/*   Updated: 2022/08/15 18:46:10 by asajjad          ###   ########.fr       */
+/*   Updated: 2022/08/21 16:31:03 by asajjad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
 		{
 			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
-			i++;
 		}
+		i++;
 	}
 	return (0);
 }

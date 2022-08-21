@@ -6,21 +6,28 @@
 /*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 17:28:39 by asajjad           #+#    #+#             */
-/*   Updated: 2022/08/12 17:46:11 by asajjad          ###   ########.fr       */
+/*   Updated: 2022/08/21 20:09:14 by asajjad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static int	itoa_length(int n)
+long int	to_abs(long int n)
 {
-	int	len;
+	if (n < 0)
+		return (-n);
+	return (n);
+}
+
+size_t	numlen(int n)
+{
+	size_t	len;
 
 	len = 0;
+	if (n == 0)
+		return (1);
 	if (n < 0)
 		len++;
-	if (n == 0)
-		len = 1;
-	while (n)
+	while (n != 0)
 	{
 		len++;
 		n = n / 10;
@@ -30,48 +37,28 @@ static int	itoa_length(int n)
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		len;
+	char	*number;
+	int		i;
 
-	len = itoa_length(n);
-	str = ft_strnew(len);
-	if (str == NULL)
+	i = numlen(n);
+	number = malloc(sizeof(char) * (numlen(n) + 1));
+	if (!number)
 		return (NULL);
-	if (n == 0)
-	str[0] = '0';
 	if (n < 0)
 	{
-		str[0] = '-';
-		if (n == -2147483648)
-		{
-				str[len-- - 1] = '8';
-				n = n / 10;
-		}
-		n = -n;
+		number[0] = '-';
+		n = n * (-1);
 	}
-	while (n != 0 && len >= 0)
+	if (n == 0)
+		number[0] = '0';
+	number[i] = '\0';
+	while (n != 0)
 	{
-		str[len-- - 1] = n % 10 + 48;
-		n = n / 10;
+		i--;
+		if (number[i] == '-')
+			break ;
+		number[i] = to_abs(n % 10) + '0';
+		n = to_abs(n / 10);
 	}
-	return (str);
+	return (number);
 }
-/*
-int main()
-{
-    int val;
-    char strn1[] = "Saaa222";
- 
-    val = ft_itoa(strn1);
-    printf("String value = %s\n", strn1);
-    printf("Integer value = %d\n", val);
- 
-    char strn2[] = "GeeksforGeeks";
-    val = ft_itoa(strn2);
-    printf("String value = %s\n", strn2);
-    printf("Integer value = %d\n", val);
- 
-    return (0);
-}
-WIERD OUTPUT
-*/

@@ -6,7 +6,7 @@
 /*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 19:18:54 by asajjad           #+#    #+#             */
-/*   Updated: 2022/08/15 19:25:33 by asajjad          ###   ########.fr       */
+/*   Updated: 2022/08/21 16:16:54 by asajjad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void			*ft_calloc(size_t count, size_t size);
 
 char			*ft_itoa(int n);
 void			ft_putchar_fd(char c, int fd);
-void			ft_putstr_fd(char *s, int fd);
+void			ft_putstr_fd(char const *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 

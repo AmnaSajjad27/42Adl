@@ -6,7 +6,7 @@
 /*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 15:47:46 by asajjad           #+#    #+#             */
-/*   Updated: 2022/08/15 18:49:29 by asajjad          ###   ########.fr       */
+/*   Updated: 2022/08/21 19:42:13 by asajjad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	j;
 
 	new_str = (char *)malloc(len + 1);
-	if (!s || !(new_str))
-	{
+	if (!s || !new_str)
 		return (0);
-	}
 	i = start;
 	j = 0;
 	while (i < ft_strlen(s) && j < len)
-	{
 		new_str[j++] = s[i++];
-	}
 	new_str[j] = '\0';
 	return (new_str);
 }
