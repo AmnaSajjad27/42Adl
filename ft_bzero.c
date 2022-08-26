@@ -1,9 +1,20 @@
-#include <stdio.h>
-#include "ft_memset.c"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/15 17:40:16 by asajjad           #+#    #+#             */
+/*   Updated: 2022/08/21 19:22:09 by asajjad          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_bzero(void *s, size_t n)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
-    ft_memset(s,'\0',n);
+	ft_memset(s, 0, n);
 }
 /*
 works

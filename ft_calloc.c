@@ -1,20 +1,29 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "ft_memset.c"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/05 19:16:19 by asajjad           #+#    #+#             */
+/*   Updated: 2022/08/21 19:29:25 by asajjad          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_calloc(size_t count, size_t size)
+#include "libft.h" 
+
+void	*ft_calloc(size_t count, size_t size)
 {
-    size_t tot_size;
-    void *dst;
+	size_t	tot_size;
+	void	*dst;
 
-    tot_size = size * count;
-
-    if (!(dst = malloc(tot_size)))
-    {
-        return (0);
-    }
-    ft_memset(dst,0,tot_size);
-    return (dst);
+	tot_size = size * count;
+	dst = malloc(tot_size);
+	if (!dst)
+		return (NULL);
+	else
+		ft_memset(dst, 0, tot_size);
+	return (dst);
 }
 /*
 int main () {
@@ -37,6 +46,5 @@ int main () {
    free( a );
    
    return(0);
-   works
 }
 */

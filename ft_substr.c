@@ -1,25 +1,44 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "ft_strlen.c"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/12 15:47:46 by asajjad           #+#    #+#             */
+/*   Updated: 2022/08/23 10:41:08 by asajjad          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+#include "libft.h"
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char    *new_str;
-    size_t  i;
-    size_t  j;
+	size_t	a;
+	size_t	b;
+	size_t	s_len;	
+	char	*str;
 
-    if (!s || !(new_str = (char *)malloc(len + 1)))
-    {
-        return (0);
-    }
-    i = start;
-    j = 0;
-    while (i < ft_strlen(s) && j < len)
-    {
-        new_str[j++] = s[i++];
-    }
-    new_str[j] = '\0';
-    return (new_str);
+	a = 0;
+	b = 0;
+	if (!s)
+		return (NULL);
+	s_len = ft_strlen(s);
+	if (start > s_len)
+		return (ft_strdup(""));
+	if (start + len > s_len)
+	len = s_len - start;
+	str = (char *)malloc(sizeof(*s) * (len + 1));
+	if (str == NULL)
+		return (NULL);
+	while (s[a])
+	{
+		if (a >= start && b < len)
+			str[b++] = s[a];
+	a++;
+	}
+	str[b] = 0;
+	return (str);
 }
 /*
 int main()

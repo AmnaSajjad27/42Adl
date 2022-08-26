@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/05 19:24:51 by asajjad           #+#    #+#             */
-/*   Updated: 2022/08/15 18:49:12 by asajjad          ###   ########.fr       */
+/*   Created: 2022/08/15 17:32:13 by asajjad           #+#    #+#             */
+/*   Updated: 2022/08/22 17:27:48 by asajjad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*s2;
+	t_list	*new_lst;
+	t_list	*elem;
 
-	s2 = (char *)malloc(ft_strlen(s1) + 1);
-	if (!s2)
-	{
+	if (!lst)
 		return (0);
+	new_lst = 0;
+	while (lst)
+	{
+		elem = ft_lstnew(f(lst->content));
+		if (!elem)
+		{
+			ft_lstclear(&new_lst, del);
+			return (0);
+		}
+		ft_lstadd_back(&new_lst, elem);
+		lst = lst->next;
 	}
-	ft_memcpy(s2, s1, ft_strlen(s1) + 1);
-	return (s2);
+	return (new_lst);
 }
-/*
-int main() {
-   char *str = "Helloworld";
-   char *result;
-   result = ft_strdup(str);
-   printf("The string : %s", result);
-   return 0;
-}
-*/

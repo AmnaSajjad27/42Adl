@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/05 19:24:51 by asajjad           #+#    #+#             */
-/*   Updated: 2022/08/15 18:49:12 by asajjad          ###   ########.fr       */
+/*   Created: 2022/08/15 17:29:49 by asajjad           #+#    #+#             */
+/*   Updated: 2022/08/15 17:31:12 by asajjad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	char	*s2;
-
-	s2 = (char *)malloc(ft_strlen(s1) + 1);
-	if (!s2)
+	if (!lst || !f)
 	{
-		return (0);
+		return ;
 	}
-	ft_memcpy(s2, s1, ft_strlen(s1) + 1);
-	return (s2);
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }
-/*
-int main() {
-   char *str = "Helloworld";
-   char *result;
-   result = ft_strdup(str);
-   printf("The string : %s", result);
-   return 0;
-}
-*/

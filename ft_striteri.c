@@ -1,35 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asajjad <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/05 19:24:51 by asajjad           #+#    #+#             */
-/*   Updated: 2022/08/15 18:49:12 by asajjad          ###   ########.fr       */
+/*   Created: 2022/08/12 17:52:25 by asajjad           #+#    #+#             */
+/*   Updated: 2022/08/22 17:46:38 by asajjad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char	*s2;
+	unsigned int	index;
 
-	s2 = (char *)malloc(ft_strlen(s1) + 1);
-	if (!s2)
+	index = 0;
+	while (s[index] != '\0')
 	{
-		return (0);
+		f(index, s + index);
+		index++;
 	}
-	ft_memcpy(s2, s1, ft_strlen(s1) + 1);
-	return (s2);
 }
 /*
-int main() {
-   char *str = "Helloworld";
-   char *result;
-   result = ft_strdup(str);
-   printf("The string : %s", result);
-   return 0;
+DONT KNOW IF ITS CORRECT
+int main()
+{
+
+}
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+	unsigned int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, s + i);
+		i++;
+	}
 }
 */
