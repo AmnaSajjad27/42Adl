@@ -1,0 +1,66 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+Errors found:\
+Error in test 1: get_next_line(5: "empty.txt"): expected: <NULL>, got: ""\
+Error in test 2: get_next_line(5: "empty.txt"): expected: <NULL>, got: ""\
+Error in test 2: get_next_line(5: "1char.txt"): expected: <NULL>, got: ""\
+Error in test 2: get_next_line(5: "one_line_no_nl.txt"): expected: <NULL>, got: ""\
+Error in test 2: get_next_line(5: "only_nl.txt"): expected: <NULL>, got: ""\
+Error in test 6: get_next_line(5: "multiple_nl.txt"): expected: <NULL>, got: ""\
+Error in test 13: get_next_line(5: "variable_nls.txt"): expected: <NULL>, got: ""\
+Error in test 6: get_next_line(5: "lines_around_10.txt"): expected: <NULL>, got: ""\
+Error in test 8: get_next_line(5: "read_error.txt"): expected: <NULL>, got: ""\
+Probable reason: You should clear the static buffer when a call to read returns -1\
+Error in test 6: get_next_line(0: "stdin"): expected: <NULL>, got: ""\
+Error in test 1: get_next_line(5: "empty.txt"): expected: <NULL>, got: ""\
+Error in test 2: get_next_line(5: "empty.txt"): expected: <NULL>, got: ""\
+Error in test 2: get_next_line(5: "1char.txt"): expected: <NULL>, got: ""\
+Error in test 2: get_next_line(5: "one_line_no_nl.txt"): expected: <NULL>, got: ""\
+Error in test 2: get_next_line(5: "only_nl.txt"): expected: <NULL>, got: ""\
+Error in test 6: get_next_line(5: "multiple_nl.txt"): expected: <NULL>, got: ""\
+Error in test 13: get_next_line(5: "variable_nls.txt"): expected: <NULL>, got: ""\
+Error in test 6: get_next_line(5: "lines_around_10.txt"): expected: <NULL>, got: ""\
+Error in test 2: get_next_line(5: "giant_line.txt"): expected: <NULL>, got: ""\
+Error in test 3: get_next_line(5: "giant_line_nl.txt"): expected: <NULL>, got: ""\
+Error in test 4: get_next_line(5: "read_error.txt"): expected: "aaaaaaaaaa\\n", got:\
+"ccccccccaaaaaaaaaa\\n"\
+Error in test 8: get_next_line(5: "read_error.txt"): expected: <NULL>, got: ""\
+Probable reason: You should clear the static buffer when a call to read returns -1\
+Error in test 2: get_next_line(5: "limits.txt"): expected: <NULL>, got: ""\
+asking for line: 2 of file:\
+1: abcdefghi\
+\
+Error in test 5: get_next_line(5: "limits.txt"): expected: <NULL>, got: ""\
+asking for line: 2 of file:\
+1: abcdefghi\\n\
+2:\
+\
+Error in test 8: get_next_line(5: "limits.txt"): expected: <NULL>, got: ""\
+asking for line: 2 of file:\
+1: abcdefghij\
+\
+Error in test 11: get_next_line(5: "limits.txt"): expected: <NULL>, got: ""\
+asking for line: 2 of file:\
+1: abcdefghij\\n\
+2:\
+\
+Error in test 14: get_next_line(5: "limits.txt"): expected: <NULL>, got: ""\
+asking for line: 2 of file:\
+1: abcdefghijk\
+\
+Error in test 17: get_next_line(5: "limits.txt"): expected: <NULL>, got: ""\
+asking for line: 2 of file:\
+1: abcdefghijk\\n\
+2:\
+...\
+\
+File too large. To see full report open: /Users/asajjad/francinette/temp/get_next_line/fsoares/errors.log\
+\
+To see the tests open: /Users/asajjad/francinette/tests/get_next_line/fsoares/tester.c\
+}
