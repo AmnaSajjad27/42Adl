@@ -19,7 +19,7 @@ char	*ft_free(char *buffer, char *buf)
 
 	tempo = ft_strjoin(buffer, buf);
 	free(buffer);
-	return (tempo);
+	return (temp);
 }
 
 // delete line find
@@ -63,7 +63,7 @@ char	*ft_line(char *buffer)
 	int		i;
 
 	i = 0;
-	if (!buffer)
+	if (!buffer[i])
 		return (NULL);
 	while (buffer[i] && buffer[i] != '\n')
 		i++;
@@ -89,21 +89,21 @@ char	*ft_line(char *buffer)
 char	*read_file(int fd, char *res)
 {
 	char	*buffer;
-	int		byte_rd;
+	int		byte_read;
 
 	if (!res)
 		res = ft_calloc(1, 1);
 	buffer = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
-	byte_rd = 1;
-	while (byte_rd > 0)
+	byte_read = 1;
+	while (byte_read > 0)
 	{
-		byte_rd = read(fd, buffer, BUFFER_SIZE);
-		if (byte_rd == -1)
+		byte_read = read(fd, buffer, BUFFER_SIZE);
+		if (byte_read == -1)
 		{
 			free(buffer);
 			return (NULL);
 		}
-		buffer[byte_rd] = 0;
+		buffer[byte_read] = 0;
 		res = ft_free(res, buffer);
 		if (ft_strchr(buffer, '\n'))
 			break ;
