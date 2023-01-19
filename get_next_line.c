@@ -19,7 +19,7 @@ char	*ft_free(char *buffer, char *buf)
 
 	tempo = ft_strjoin(buffer, buf);
 	free(buffer);
-	return (temp);
+	return (tempo);
 }
 
 // delete line find
